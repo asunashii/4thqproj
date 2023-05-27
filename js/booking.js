@@ -42,7 +42,7 @@ function calculateFare() {
     let place = document.getElementById("Destination").value;
     let discount = document.getElementById("discount").value;
 
-    let rate = 13.5;
+    let rate = 13.5; //fare for 1km
     let fare = 0;
     console.log(place)
 
@@ -71,11 +71,11 @@ function calculateFare() {
     };
 
     console.log(fare);
-
+    //discounts
     const disc = ["Student", "SC", "PWD"];
 
     if (disc.includes(discount) == true) {
-        fare = fare-(fare*0.2);
+        fare = fare - (fare * 0.2);
     }
 
     fare = Math.floor(fare);
@@ -88,7 +88,7 @@ function clearForm() {
     display.innerHTML = "";
 }
 
-function redirect(){
+function redirect() {
     window.open("ticket.html");
 }
 
