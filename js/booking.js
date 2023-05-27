@@ -1,10 +1,3 @@
-
-function calculateFare(){
-
-};
-
-
-
 let display = document.getElementById("summary");
 function travelTicket() {
     let name, email, gender, dest, bday, tdate, time, bag;
@@ -19,9 +12,8 @@ function travelTicket() {
 
     //changes am to pm etc
     x = time.substring(0, 2);
-    console.log(x);
 
-    if(x > 12){
+    if (x > 12) {
         time = time + " pm";
     }
     else {
@@ -35,18 +27,68 @@ function travelTicket() {
             console.log(gender)
         }
     }
+    calculateFare();
 
     let result = ` Name: ${name} <br/> Email: ${email} <br/> Gender: ${gender} <br/> Birthday: ${bday} 
-    <br/> Destination: ${dest} <br/> Date and Time: ${tdate}, ${time} <br/> `;
+    <br/> <br/> Destination: ${dest} <br/> Date and Time of Travel: ${tdate}, ${time} <br/>`;
 
-    Price = calculateFare()
     display.innerHTML = result;
 
     return false;
-}
+};
+
+let output = document.getElementById("price");
+function calculateFare() {
+    let place = document.getElementById("Destination").value;
+    let discount = document.getElementById("discount").value;
+
+    let rate = 13.5;
+    let fare = 0;
+    console.log(place)
+
+    const near = ["Oton", "Leganes", "Pavia", "Zarraga", "Santa Barbara", "San Miguel"]; //9km - 19km away
+    const mid = ["Tigbauan", "Guimbal", "New Lucena", "Alimodian", "Leon", "Cabatuan", "Pototan", "Maasin"
+        , "Janiuay", "Badiangan"]; //20 - 30km away
+    const far = ["Tubungan", "Igbaras", "Miag-ao", "San Joaquin", "Lambunao", "Calinog", "Anilao", "Banate"
+        , "Dueñas", "Passi City", "San Enrique"]; // 40-50km away
+    const veryFar = ["Barotac Viejo", "San Rafael", "Lemery", "Ajuy", "Sara", "Concepcion", "San Dionisio",
+        "Batad", "Balasan", "Estancia", "Carles"]; //60-100km away
+
+
+    let length;
+
+    if (near.includes(place) == true) {
+        fare = rate * 14;
+    }
+    else if (mid.includes(place) == true) {
+        fare = rate * 25;
+    }
+    else if (far.includes(place) == true) {
+        fare = rate * 45;
+    }
+    else if (veryFar.includes(place) == true) {
+        fare = rate * 80;
+    };
+
+    console.log(fare);
+
+    const disc = ["Student", "SC", "PWD"];
+
+    if (disc.includes(discount) == true) {
+        fare = fare-(fare*0.2);
+    }
+
+    fare = Math.floor(fare);
+    console.log(fare);
+
+    output.innerHTML = "Price: " + fare;
+};
 
 function clearForm() {
     display.innerHTML = "";
 }
 
+function redirect(){
+    window.open("ticket.html");
+}
 
