@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image/x-icon" href="images/Favicon.png">
     <link rel="stylesheet" type="text/CSS" href="css/styles.css">
-    <script src="js/booking.js"> </script>
+    <script src="../js/booking.js"> </script>
 </head>
 
 <body>
@@ -18,25 +18,20 @@
     <div id="forms">
         <form id="signup" onsubmit="return travelTicket()" onreset="clearForm()" ;>
             <label for="inputName">Name:</label>
-            <input type="text" id="inputName" name="inputName" onblur="completeForms()" onfocus="completeForms()"
-                placeholder="Enter Your Name">
+            <input type="text" id="inputName" name="inputName" placeholder="Enter Your Name">
             </br>
             <label for="emailAdd">Email:</label>
-            <input type="email" id="emailAdd" name="emailAdd" onblur="completeForms()" onfocus="completeForms()"
-                placeholder="Enter Your Email">
+            <input type="email" id="emailAdd" name="emailAdd" placeholder="Enter Your Email">
             </br>
 
             <label for="gender">Gender: </label> </br>
-            <input type="radio" id="male" name="gender" value="Male" onblur="completeForms()" onfocus="completeForms()"
-                required>
+            <input type="radio" id="male" name="gender" value="Male">
             <label for="male">Male</label></br>
 
-            <input type="radio" id="female" name="gender" value="Female" onblur="completeForms()"
-                onfocus="completeForms()">
+            <input type="radio" id="female" name="gender" value="Female">
             <label for="female">Female</label></br>
 
-            <input type="radio" id="notAppl" name="gender" value="N/A" onblur="completeForms()"
-                onfocus="completeForms()">
+            <input type="radio" id="notAppl" name="gender" value="N/A">
             <label for="N/A">Prefer not to mention</label></br></br>
 
 
@@ -59,15 +54,13 @@
             <br>
             <br>
 
-            <input type="submit" value="Submit" onclick="summaRise()">
+            <input type="submit" value="Submit">
             <input type="reset" value="Clear">
 
             </fieldset>
         </form>
     </div>
-    <div>
-        <p id="ticket"></p>
-    </div>
+    <p id="summary"></p>
 </body>
 
 </html>
