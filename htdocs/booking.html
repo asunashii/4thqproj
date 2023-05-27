@@ -1,1 +1,73 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+    <title> Flight Booking </title>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="images/Favicon.png">
+    <link rel="stylesheet" type="text/CSS" href="css/styles.css">
+    <script src="js/booking.js"> </script>
+</head>
+
+<body>
+    <header>
+        <h2 id="header"> TRAVELLER'S PROFILE </h2>
+        <p>Kindly sign up to start your adventure!</p>
+    </header>
+
+    <div id="forms">
+        <form id="signup" onsubmit="return travelTicket()" onreset="clearForm()" ;>
+            <label for="inputName">Name:</label>
+            <input type="text" id="inputName" name="inputName" onblur="completeForms()" onfocus="completeForms()"
+                placeholder="Enter Your Name">
+            </br>
+            <label for="emailAdd">Email:</label>
+            <input type="email" id="emailAdd" name="emailAdd" onblur="completeForms()" onfocus="completeForms()"
+                placeholder="Enter Your Email">
+            </br>
+
+            <label for="gender">Gender: </label> </br>
+            <input type="radio" id="male" name="gender" value="Male" onblur="completeForms()" onfocus="completeForms()"
+                required>
+            <label for="male">Male</label></br>
+
+            <input type="radio" id="female" name="gender" value="Female" onblur="completeForms()"
+                onfocus="completeForms()">
+            <label for="female">Female</label></br>
+
+            <input type="radio" id="notAppl" name="gender" value="N/A" onblur="completeForms()"
+                onfocus="completeForms()">
+            <label for="N/A">Prefer not to mention</label></br></br>
+
+
+            <label for="Birthdate">Birthdate: </label>
+            <input type="date" id="Birthdate" required> </br>
+            <hr>
+            <label for="Destination">Destination: </label>
+
+            <label for="travelDate">Date of Travel: </label>
+            <input type="date" id="travelDate" required> </br>
+
+            <label for="time">Desired Time: </label>
+            <input type="time" id="time" required> </br>
+
+            <label for="baggage">Baggage: </label>
+            <select name="baggage" id="baggage">
+                <option value="1">Baggage</option>
+                <option value="2">No Baggage</option> </br>
+            </select>
+            <br>
+            <br>
+
+            <input type="submit" value="Submit" onclick="summaRise()">
+            <input type="reset" value="Clear">
+
+            </fieldset>
+        </form>
+    </div>
+    <div>
+        <p id="ticket"></p>
+    </div>
+</body>
+
+</html>
