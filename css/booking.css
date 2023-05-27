@@ -1,0 +1,53 @@
+@font-face {
+    font-family: BSold;
+    src: url(/palis.ttf);
+}
+html{
+    text-align: center;
+    position: relative;
+    top: 10%;
+    width: auto;
+    height: auto;
+    font-family: BSold;
+}
+
+
+#forms{
+    text-align: left;
+    background-color: white;
+    opacity: 1;
+    border-radius: 3%;
+    width: 400px;
+    height: 500px;
+    margin: auto;
+    opacity: 0.94;
+}
+#clear{
+    position: relative;
+    left: 10%;
+}
+.button {
+    background-color: rgb(80, 121, 74);
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    font-size: large;
+    width: 100px;
+    height: 30px;
+    margin: 5px;
+    border-radius: 5%;
+    transition: all 0.2s;  /* Smoother transition */
+}
+
+/* These are the design states of our button as it is, after it's visited, when hovered, and when active*/
+
+.button:hover {
+    background-color: rgb(33, 65, 29);
+    transform: scale(1.1); /* Makes the button go bigger */
+
+}
+
+.button:active {
+    background-color: rgb(24, 39, 13);
+    transform: scale(1);
+}
