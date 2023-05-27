@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>  Booking </title>
+    <title> Booking </title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/CSS" href="css/styles.css">
 </head>
@@ -14,7 +14,7 @@
     </header>
 
     <div id="forms">
-        <form id="signup" onsubmit = "return travelTicket()" onreset="clearForm()" ;>
+        <form id="signup" onsubmit="return travelTicket()" onreset="clearForm()" ;>
             <label for="inputName">Name:</label>
             <input type="text" id="inputName" name="inputName" placeholder="Enter Your Name">
             </br>
@@ -29,7 +29,7 @@
             <input type="radio" id="female" name="gender" value="Female">
             <label for="female">Female</label></br>
 
-            <input type="radio" id="notAppl" name="gender" value="N/A">
+            <input type="radio" id="notAppl" name="gender" value="Prefer not to mention">
             <label for="N/A">Prefer not to mention</label></br></br>
 
 
@@ -37,7 +37,61 @@
             <input type="date" id="Birthdate" required> </br>
             <hr>
             <label for="Destination">Destination: </label>
-
+            <select name="Destination" id="Destination">
+                <optgroup label="District 1">
+                    <option value="Oton">Oton</option>
+                    <option value="Tigbauan">Tigbauan</option>
+                    <option value="Tubungan">Tubungan</option>
+                    <option value="Igbaras">Igbaras</option>
+                    <option value="Guimbal">Guimbal</option>
+                    <option value="Miag-ao">Miag-ao</option>
+                    <option value="San Joaquin">San Joaquin</option>
+                </optgroup>
+                <optgroup label="District 2">
+                    <option value="Leganes">Leganes</option>
+                    <option value="Pavia">Pavia</option>
+                    <option value="Zarraga">Zarraga</option>
+                    <option value="New Lucena">New Lucena</option>
+                    <option value="Santa Barbara">Santa Barbara</option>
+                    <option value="Alimodian">Alimodian</option>
+                    <option value="Leon">Leon</option>
+                </optgroup>
+                <optgroup label="District 3">
+                    <option value="Cabatuan">Cabatuan</option>
+                    <option value="Mina">Mina</option>
+                    <option value="Pototan">Pototan</option>
+                    <option value="Maasin">Maasin</option>
+                    <option value="Janiuay">Janiuay</option>
+                    <option value="Badiangan">Badiangan</option>
+                    <option value="Lambunao">Lambunao</option>
+                    <option value="Calinog">Calinog</option>
+                    <option value="Bingawan">Bingawan</option>
+                </optgroup>
+                <optgroup label="District 4">
+                    <option value="Anilao">Anilao</option>
+                    <option value="Banate">Banate</option>
+                    <option value="Barotac Nuevo">Barotac Nuevo</option>
+                    <option value="Dingle">Dingle</option>
+                    <option value="Dueñas">Dueñas</option>
+                    <option value="Dumangas">Dumangas</option>
+                    <option value="Passi City">Passi City</option>
+                    <option value="San Enrique">San Enrique</option>
+                </optgroup>
+                <optgroup label="District 5">
+                    <option value="Barotac Viejo">Barotac Viejo</option>
+                    <option value="San Rafael">San Rafael</option>
+                    <option value="Lemery">Lemery</option>
+                    <option value="Ajuy">Ajuy</option>
+                    <option value="Sara">Sara</option>
+                    <option value="Concepcion">Concepcion</option>
+                    <option value="San Dionisio">San Dionisio</option>
+                    <option value="Batad">Batad</option>
+                    <option value="Balasan">Balasan</option>
+                    <option value="Estancia">Estancia</option>
+                    <option value="Carles">Carles</option>
+                </optgroup>
+            </select>
+            </br>
             <label for="travelDate">Date of Travel: </label>
             <input type="date" id="travelDate" required> </br>
 
