@@ -1,6 +1,8 @@
 let display = document.getElementById("summary");
+let display2 = document.getElementById("summary2");
+
 function travelTicket() {
-    let name, email, gender, dest, bday, tdate, time, bag;
+    let name, email, gender, dest, bday, tdate, time, bag, disc;
 
     name = document.getElementById("inputName").value;
     email = document.getElementById("emailAdd").value;
@@ -8,6 +10,7 @@ function travelTicket() {
     tdate = document.getElementById("travelDate").value;
     time = document.getElementById("time").value;
     dest = document.getElementById("Destination").value;
+    disc = document.getElementById("discount").value;
     gender = document.getElementsByName("gender");
 
     //changes am to pm etc
@@ -29,10 +32,13 @@ function travelTicket() {
     }
     calculateFare();
 
-    let result = ` Name: ${name} <br/> Email: ${email} <br/> Gender: ${gender} <br/> Birthday: ${bday} 
-    <br/> <br/> Destination: ${dest} <br/> Date and Time of Travel: ${tdate}, ${time} <br/>`;
+    let result = `Here is your summary!<br/> <br/>Name: ${name} <br/> Email: ${email} <br/> Gender: ${gender} <br/> Birthday: ${bday} 
+    <br/> <br/> Destination: ${dest} <br/> Date and Time of Travel: ${tdate}, ${time} <br/> Discount: ${disc}`;
+    let result2 = `Dear ${name}, you are now ready to explore! <br/> Name: ${name} <br/> Email: ${email} <br/> Gender: ${gender} <br/> Birthday: ${bday} 
+    <br/> <br/> Destination: ${dest} <br/> Date and Time of Travel: ${tdate}, ${time} <br/> Discount: ${disc}`;
 
     display.innerHTML = result;
+    display2.innerHTML = result2;
 
     return false;
 };
@@ -73,7 +79,6 @@ function calculateFare() {
     console.log(fare);
     //discounts
     const disc = ["Student", "SC", "PWD"];
-
     if (disc.includes(discount) == true) {
         fare = fare - (fare * 0.2);
     }
@@ -81,11 +86,12 @@ function calculateFare() {
     fare = Math.floor(fare);
     console.log(fare);
 
-    output.innerHTML = "Price: " + fare;
+    output.innerHTML = "Price: ₱" + fare + ".00";
 };
 
 function clearForm() {
     display.innerHTML = "";
+    output.innerHTML = "";
 }
 
 function redirect() {
