@@ -1,5 +1,5 @@
 function summaRise() {
-    window.open("htdocs/summary.html");
+    window.open("htdocs/summary.html"); //does not work, needs debugging
 }
 
 let display = document.getElementById("ticket");
@@ -33,4 +33,8 @@ function travelTicket() {
     display.innerHTML = result;
 
     return false;
+}
+
+function clearForm() {
+    display.innerHTML = "";
 }
