@@ -1,7 +1,53 @@
 html{
+    background-image: url(../images/Background.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
     overflow: hidden;
+}
+
+body{
     text-align: center;
-    position: relative;
-    top: 40%;
-    left: 50%;
+    position: fixed; /* or absolute */
+    top: 35%;
+    left: 40%;
+
+    color: white;
+    font-size: 20px;
+    text-shadow: 0px 2px 4px #000
+  
+}
+
+#bookButton {
+    background-color: rgb(196, 188, 119);
+    color: white;
+
+    font-weight: bolder;
+    font-size: large;
+    width: 150px;
+    height: 40px;
+    margin: 5px;
+    border-radius: 5%;
+    transition: all 0.2s;
+}
+
+
+
+#bookButton:hover {
+    background-color: rgb(145, 132, 60);
+    transform: scale(1.1); 
+
+}
+
+#bookButton:active {
+    background-color: rgb(104, 87, 49);
+    transform: scale(1);
+}
+
+a{
+    color: white;
+    transition: all 0.2s;
+}
+
+a:hover {
+    color: rgb(219, 202, 156);
 }
