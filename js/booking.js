@@ -1,5 +1,5 @@
 let display = document.getElementById("summary");
-let display2 = document.getElementById("summary2");
+let display2 = document.getElementById("ticket");
 
 function travelTicket() {
     let name, email, gender, dest, bday, tdate, time, bag, disc;
