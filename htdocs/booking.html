@@ -14,7 +14,7 @@
     </header>
 
     <div id="forms">
-        <form id="signup" onsubmit="return travelTicket()" onreset="clearForm()" ;>
+        <form id="signup" onsubmit="return travelTicket()" onreset="clearForm()" action = "ticket.html" method="get">
             <label for="inputName">Name:</label>
             <input type="text" id="inputName" name="inputName" placeholder="Enter Your Name">
             </br>
@@ -111,15 +111,14 @@
             <input type="time" id="time" required> </br>
 
             <input type="submit" value="Submit" class="button">
-            <input type="reset" value="Clear" class="button">
+            <input type="reset" value="Clear" class="button" id="clear">
 
             </fieldset>
         </form>
     
     <h3 id="price"></h3>
-    </br>
     <p id="summary"></p>
-    <button class="button" onclick="redirect()">Done!</button>
+    <button  class="button" onclick="redirect()">Done!</button>
 </div>
     <script src="../js/booking.js"> </script>
 </body>
