@@ -1,14 +1,9 @@
-@font-face {
-    font-family: BSold;
-    src: url(/palis.ttf);
-}
 html{
     text-align: center;
     position: relative;
-    top: 10%;
+    top: 5%;
     width: auto;
     height: auto;
-    font-family: BSold;
 }
 
 
