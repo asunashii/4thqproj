@@ -4,7 +4,7 @@
 <head>
     <title> Booking </title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/CSS" href="css/styles.css">
+    <link rel="stylesheet" type="text/CSS" href="../css/booking.css">
 </head>
 
 <body>
@@ -18,12 +18,14 @@
             <label for="inputName">Name:</label>
             <input type="text" id="inputName" name="inputName" placeholder="Enter Your Name">
             </br>
+        </br>
             <label for="emailAdd">Email:</label>
             <input type="email" id="emailAdd" name="emailAdd" placeholder="Enter Your Email">
             </br>
+        </br>
 
             <label for="Birthdate">Birthdate: </label>
-            <input type="date" id="Birthdate" required> </br>
+            <input type="date" id="Birthdate" required> </br></br>
 
             <label for="discount">Choose what applies: </label>
             <select name="discount" id="discount">
@@ -31,7 +33,7 @@
                 <option value="Student">Student</option>
                 <option value="PWD">PWD</option>
                 <option value="SC">Senior Citizen</option>
-            </select></br>
+            </select></br></br>
 
             <label for="gender">Gender: </label> </br>
             <input type="radio" id="male" name="gender" value="Male">
@@ -41,10 +43,9 @@
             <label for="female">Female</label></br>
 
             <input type="radio" id="notAppl" name="gender" value="Prefer not to mention">
-            <label for="N/A">Prefer not to mention</label></br>
+            <label for="N/A">Prefer not to mention</label></br></br>
 
-
-            <hr>
+            <h3>Travel Details</h3>
             <label for="Destination">From: City Proper</label> </br>
             <label for="Destination">Destination: </label>
             <select name="Destination" id="Destination">
@@ -109,16 +110,16 @@
             <label for="time">Desired Time: </label>
             <input type="time" id="time" required> </br>
 
-            <input type="submit" value="Submit">
-            <input type="reset" value="Clear">
+            <input type="submit" value="Submit" class="button">
+            <input type="reset" value="Clear" class="button">
 
             </fieldset>
         </form>
-    </div>
+    
     <h3 id="price"></h3>
     <p id="summary"></p>
-    <button id="button" onclick="redirect()">Done!</button>
-    
+    <button class="button" onclick="redirect()">Done!</button>
+</div>
     <script src="../js/booking.js"> </script>
 </body>
 
